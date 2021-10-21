@@ -45,6 +45,18 @@ class LinkedList:
             node = node.next
         print()
 
+    def reverse_traverse(self):
+        node = self.tail
+        while node:
+            print(node.value, end='')
+            node = node.prev
+            if node == self.tail:
+                break
+            else:
+                print(' <-> ', end='')
+
+        print()
+
     def insert(self, value, position=None):
         length = len(self)
         new_node = Node(value)

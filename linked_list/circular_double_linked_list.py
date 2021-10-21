@@ -50,6 +50,18 @@ class LinkedList:
             node = node.next
         print()
 
+    def reverse_traverse(self):
+        node = self.tail
+        while node:
+            print(node.value, end='')
+            node = node.prev
+            if node == self.tail:
+                break
+            else:
+                print(' <-> ', end='')
+
+        print()
+
     def insert(self, value, position = None):
         new_node = Node(value)
         if self.head is None:
@@ -157,5 +169,6 @@ print(linked_list.update(200, 10))
 print(linked_list.delete(2))
 print(linked_list.delete(10))
 print(linked_list)
+linked_list.reverse_traverse()
 
 
