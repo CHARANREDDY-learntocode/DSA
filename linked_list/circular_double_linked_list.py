@@ -62,6 +62,13 @@ class LinkedList:
 
         print()
 
+    def add(self, values = None):
+        if values is None:
+            values = []
+        if values:
+            for value in values:
+                self.insert(value)
+
     def insert(self, value, position = None):
         new_node = Node(value)
         if self.head is None:
