@@ -19,7 +19,7 @@ class LinkedList:
 
     def __iter__(self):
         node = self.head
-        while node.next is not None:
+        while node is not None:
             yield node
             node = node.next
 
@@ -88,7 +88,7 @@ class LinkedList:
         node.value = value
         return True
 
-    def delete(self, location):
+    def delete(self, location=None):
         length = len(self)
         if location > length:
             return False
